@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+function indent() {
+	c='s/^/       /'
+	case $(uname) in
+		Darwin) sed -l "$c";;
+		*)      sed -u "$c";;
+	esac
+}
 
 BUILD_DIR="$1"
 wget "http://www.rmhoist.com/downloads/font/ARIALUNI.TTF"
@@ -11,5 +18,7 @@ mv "ARIALUNI.TTF" "$TARGET_DIR"
 
 
 wget "http://unifoundry.com/pub/unifont-8.0.01/unifont-8.0.01.tar.gz"
+
+SOURCE_DIR="$(dirname $0)/../unifont-8.0.01.tar.gz"
 
 tar -xvzf "$SOURCE_DIR" -C "$TARGET_DIR" | indent
