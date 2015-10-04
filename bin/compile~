@@ -11,3 +11,5 @@ mv "ARIALUNI.TTF" "$TARGET_DIR"
 
 
 wget "http://unifoundry.com/pub/unifont-8.0.01/unifont-8.0.01.tar.gz"
+
+tar -xvzf "$SOURCE_DIR" -C "$TARGET_DIR" | indent
