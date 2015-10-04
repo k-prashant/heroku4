@@ -1,4 +1,4 @@
-# heroku-buildpack-fonts
+# heroku-buildpack-fonts-for-ARIALUNI.TTF
 
 Heroku buildpack for installing fonts present in Unix System on an heroku instance.
 
